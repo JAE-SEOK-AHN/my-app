@@ -1,0 +1,391 @@
+html {
+	height: 100%;
+}
+
+/* login */
+.login-body {
+	height: 100%;
+	background: url(/resources/views/login/bg_login.jpg) no-repeat 50% 0;
+	background-size: cover;
+	overflow: hidden;
+	text-align: center;
+}
+#loginForm {
+	display: inline-block;
+	position: absolute;
+    top: calc(50% - 150px);
+	left: calc(50% - 160px);
+}
+.loginFormLabel {
+	font-size: 27pt;
+    font-weight: 900;
+    background-color: #FFF;
+    height: 100px;
+}
+.footer {
+	bottom: 28%;
+    position: absolute;
+    width: calc(100% - 10px);
+}
+.footer p {
+	margin: 5px 0px;
+}
+/* common */
+#alertTitle, #confirmTitle, #promptTitle {
+	height:18px;
+}
+
+.error {
+	background: #ff4646;
+}
+
+#alertBody, #confirmBody {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height:50px;
+	width:100%;
+	word-break: break-word;
+    overflow: hidden;
+}
+
+#confirmOk, #promptOk {
+	margin-right: 10px;
+}
+
+.popup-form {
+	widht: 400px;
+	height: auto;
+}
+
+.popup-form > div {
+	margin-top: 5px;
+	margin-left: 20px;
+}
+
+.popup-table  {
+	display: table;
+	border-collapse: separate;
+	border-spacing: 0 10px;
+}
+
+.popup-tr {
+	display: table-row;
+}
+
+.popup-th {
+	display: table-cell;
+	width: 100px;
+	vertical-align: middle;
+}
+
+.popup-td {
+	display: table-cell;
+}
+
+.popup-button-area  {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.popup-button-area input+input  {
+	margin-left: 10px;	
+}
+
+#tablemenuInfoGrid td {
+	padding:2px;
+}
+
+/* main > dashboard */
+.dash-top {
+	 width: 100%; 
+	 height: calc(80% - 28px);
+	 display: inline-flex;
+}
+.dash-top-right {
+	width: 30%; 
+	height: 100%;
+	float: right;
+}
+.dash-work {
+	width:70%; 
+	height:99%;
+    margin: 5px 0px 5px 5px;
+}
+.dash-rm-work {
+	width: 97%;
+	height: 50%;
+    margin: 5px 0px 5px 5px;
+}
+.dash-link {
+	width: 97%; 
+	height: calc(50% - 10px);
+    margin: 0px 5px 5px 5px;
+}
+.dash-bottom {
+	width: 99.9%;
+    height: 21.7%;
+    display: inline-flex;
+}
+.bullet-chart-panel {
+	text-align: center;
+	width: 33.3%;
+	height: 100%;
+    margin: 5px 0px 5px 5px;
+}
+.bullet-chart {
+	margin-left: 8%
+}
+.dash-border {
+	width: calc(100% - 2px);
+	height: calc(100% - 34px);
+	border: 1px solid #000;
+}
+.dash-link-table {
+	width: 100%;
+	height: calc(100% - 34px);
+	text-align: center;
+	vertical-align: middle;
+	border-spacing: 0px;
+    border: 1px solid;
+}
+.dash-link-table tr td {
+	font-size: 20px;
+	color: #000;
+}
+.middle-td {
+	border-width: 4px 0px;
+	border-style: solid;
+	border-color: #fff;
+}
+.normal {
+	background-color: #40c057;
+}
+.minor {
+	background-color: #fcc419;
+}
+.major {
+	background-color: #ff9f00;
+}
+.critical {
+	background-color: #fa5252;
+}
+.main-title {
+	width: 100%;
+}
+.main-title input {
+	font-size: 15px;
+	width: 100%;
+	height: 34px;
+	opacity: 1;
+}
+.weekly-work-list {
+	cursor: pointer;
+}
+.notDraggable {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; 	/* Safari */
+	-khtml-user-select: none; 	/* Konqueror HTML */
+	-moz-user-select: none; 	/* Firefox */
+	-ms-user-select: none; 		/* Internet Explorer/Edge */
+	user-select: none; 			/* Non-prefixed version, currently supported by Chrome and Opera */	
+}
+
+/* main > command (work) */
+.cmd-tab {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.cmd-panel {
+	width: 90%;
+    border: 0px;
+}
+.cmd-top {
+	margin: 5px;
+}
+.cmd-bottom {
+	width: 99%;
+	height: calc(40% - 49px);
+	margin: 5px;
+}
+.cmd-work {
+	width: 100%;
+	height: calc(100% - 38px);
+	display: inline-flex;
+}
+.cmd-work > div:nth-child(n+2) {
+	margin-left: 5px;
+}
+.cmd-eqp-list {
+	width: calc(16% - 15px);
+	height: 100%;
+}
+.cmd-tango-plan {
+	width: 42%;
+	height: 100%;
+}
+.cmd-netact-plan {
+	width: 42%;
+	height: 100%;
+}
+.cmd-result {
+	width: 100%;
+	height: calc(100% - 47px);	
+}
+.cmd-title ul li:nth-child(n+2) {
+	margin-left: 5px;
+}
+.cmd-title-li {
+	border-right-width: 1px;
+    border-right-style: solid;
+}
+.cmd-top-work {
+	width: 100%;
+	height: calc(100% - 34px);
+	display: flex;
+}
+.cmd-top-left {
+	width: 100%;
+	height: 100%;
+}
+.cmd-right-panel {
+	width: calc(10% - 10px);
+	height: 100%;
+}
+.cmd-buttons {
+	width: 100%;
+	height: 97px;
+    padding: 5px 5px 0 5px; 
+}
+.cmd-diff-lines {
+	width: 100%;
+	height: calc(100% - 109px);
+    padding: 3px 5px;
+}
+
+.cmd-loader {
+    width: 145px !important;
+    height: 95px !important;
+    left: calc(100% - 149px) !important;
+    top: calc(-100% + 174px) !important;
+}
+
+/* main > command (low risk work) */
+.low-risk-cmd-tab {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.low-risk-cmd-panel {
+	width: 90%;
+    border: 0px;
+}
+.low-risk-cmd-top {
+	margin: 5px;
+}
+.low-risk-cmd-bottom {
+	width: 99%;
+	height: calc(40% - 49px);
+	margin: 5px;
+}
+.low-risk-cmd-work {
+	width: 100%;
+	height: calc(100% - 38px);
+	display: inline-flex;
+}
+.low-risk-cmd-work > div:nth-child(n+2) {
+	margin-left: 5px;
+}
+.low-risk-cmd-eqp-list {
+	width: calc(16% - 15px);
+	height: 100%;
+}
+.low-risk-cmd-tango-plan {
+	width: calc(84% + 5px);
+	height: 100%;
+}
+.low-risk-cmd-result {
+	width: 100%;
+	height: calc(100% - 47px);	
+}
+.low-risk-cmd-title ul li:nth-child(n+2) {
+	margin-left: 5px;
+}
+.low-risk-cmd-title-li {
+	border-right-width: 1px;
+    border-right-style: solid;
+}
+.low-risk-cmd-top-work {
+	width: 100%;
+	height: calc(100% - 34px);
+	display: flex;
+}
+.low-risk-cmd-top-left {
+	width: 100%;
+	height: 100%;
+}
+.low-risk-cmd-right-panel {
+	width: calc(10% - 10px);
+	height: 100%;
+}
+.low-risk-cmd-buttons {
+	width: 100%;
+	height: 63px;
+    padding: 5px 5px 0 5px; 
+}
+.low-risk-cmd-diff-lines {
+	width: 100%;
+	height: calc(100% - 75px);
+    padding: 3px 5px;
+}
+
+.low-risk-cmd-loader {
+    width: 145px !important;
+    height: 65px !important;
+    left: calc(100% - 149px) !important;
+    top: calc(-100% + 139px) !important;
+}
+#lowRiskWorkFileUpload {
+	display: none;
+}
+#lowRiskWorkRegister {
+    margin-top: 75px;
+    text-align: center;
+}
+#lowRiskWorkRegister div {
+	margin: 10px;
+}
+#lowRiskWorkRegister div label {
+	display: inline-block;
+	width: 80px;
+}
+#lowRiskWorkRegister div {
+	text-align: left;
+}
+#lowRiskWorkRegister div:last-child {
+	text-align: right;
+}
+.sessionId {
+	margin-right: 5px;
+	font-size: 15px;
+}
+.password-modify-input {
+	text-align: center;
+	margin: 5px;
+}
+.password-modify-input input {
+	letter-spacing: normal;
+}
+.password-modify-button {
+	text-align: center;
+	margin-top: 10px;
+}
+.blue-bold-text {
+	color: #00f;
+    font-weight: bold;
+}
+.red-bold-text {
+	color: #f00;
+    font-weight: bold;
+}

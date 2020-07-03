@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.barunsw.simple.user.UserDao">	
+
+	<select id="selectUserList" parameterType="com.barunsw.simple.user.UserVo" resultType="com.barunsw.simple.user.UserVo">
+		SELECT 
+			USER_ID
+			, NAME
+			, date_format(BIRTH, '%m월 %d일') AS BIRTH
+			, CASE WHEN GENDER='W' THEN '여' ELSE '남' END AS GENDER
+			, date_format(CREATE_DATE, '%y.%m.%d %H:%i:%s') AS CREATE_DATE
+		FROM
+			TB_USER
+	</select>
+	
+	<select id="selectUserOne" parameterType="com.barunsw.simple.user.UserVo" resultType="com.barunsw.simple.user.UserVo">
+		SELECT 
+			USER_ID, NAME, BIRTH, GENDER
+		FROM
+			TB_USER
+		WHERE
+			USER_ID = #{userId}
+	</select>
+	
+	<insert id="insertUser" parameterType="com.barunsw.simple.user.UserVo">
+		INSERT INTO TB_USER
+			(USER_ID, NAME, BIRTH, GENDER, CREATE_DATE)
+		VALUES
+			(#{userId}, #{name}, #{birth}, #{gender}, sysdate())
+	</insert>
+	
+	<update id="updateUser" parameterType="com.barunsw.simple.user.UserVo">
+		UPDATE TB_USER 
+		SET 
+			NAME 		= #{name}
+			, BIRTH 		= #{birth}
+			, GENDER		= #{gender}
+			, CREATE_DATE = sysdate()
+		WHERE
+			USER_ID = #{userId}			
+	</update>
+	
+	<delete id="deleteUser" parameterType="com.barunsw.simple.user.UserVo">
+		DELETE FROM TB_USER
+		WHERE
+			USER_ID = #{userId}			
+	</delete>
+	
+</mapper>

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: SimpleWeb
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: imj10
+Implementation-Vendor-Id: SimpleWeb
+Build-Jdk: 1.8.0_252
+Implementation-URL: https://projects.spring.io/spring-boot/SimpleWeb/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
