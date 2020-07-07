@@ -2,40 +2,32 @@ import React, { Component } from 'react';
 import './App.css';
 import Customer from './components/Customer'
 
-const customers = [
-  {
-  'id' : 1,
-  'image' : 'https://placeimg.com/64/64/any',
-  'name' : 'Jae-Seok Ahn',
-  'birthday' : '980601',
-  'gender' : 'Male',
-  'job' : 'student' 
-  },
-  {
-  'id' : 2,
-  'image' : 'https://placeimg.com/64/64/any',
-  'name' : 'Jun-tae Kim',
-  'birthday' : '960102',
-  'gender' : 'Male',
-  'job' : 'baseball player' 
-  },
-  {
-  'id' : 3,
-  'image' : 'https://placeimg.com/64/64/any',
-  'name' : 'Ji-hoon Choi',
-  'birthday' : '951234',
-  'gender' : 'Male',
-  'job' : 'baseball player' 
-  }
-]
 
-class App extends Component {
+class App extends Component { 
+
+  state= {
+    customers: ""    
+  }
+
+  componentDidMount () {
+    this.callApi()      
+      .then(res => this.setState({customers : res}))
+      .catch(err => console.log(err));
+  }
+
+  callApi = async () => {
+    const response = await fetch('/api/custormers');
+    const body = await response.json();    
+    return body;
+  }
+
+
   render() {
     return (
       <div>
         {
-          customers.map(c => {return(<Customer id={c.id} image={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job}/>)})             
-        }
+          this.state.customers ? this.state.customers.map(c => {return(<Customer id={c.id} image={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job}/>)})             
+        : ""}
         </div>
       );
     }  
