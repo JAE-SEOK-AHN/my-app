@@ -1,12 +1,25 @@
 import React, { Component } from 'react';
+import Customer from './components/Customer';
+import CustomerAdd from './components/CustomerAdd';
 import './App.css';
-import Customer from './components/Customer'
 
 
 class App extends Component { 
 
-  state= {
-    customers: ""    
+  constructor(props) {
+    super(props);
+    this.state = {
+      customers: ''     
+    }      
+  }
+
+  stateRefresh = () => {
+    this.setState({
+      customers: ''
+    });
+    this.callApi()      
+      .then(res => this.setState({customers : res}))
+      .catch(err => console.log(err));
   }
 
   componentDidMount () {
@@ -28,6 +41,7 @@ class App extends Component {
         {
           this.state.customers ? this.state.customers.map(c => {return(<Customer id={c.id} image={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job}/>)})             
         : ""}
+        <CustomerAdd stateRefresh={this.stateRefresh}/>
         </div>
       );
     }  
